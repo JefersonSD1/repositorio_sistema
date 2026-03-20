@@ -1,0 +1,46 @@
+/* Centrar el contenido en la pantalla */
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f6f9;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+/* Estilo de la tarjeta blanca del formulario */
+.login-container {
+background-color: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+width: 300px;
+}
+
+/* Diseño de las cajas de texto */
+input {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+
+}
+
+/* Diseño del botón de ingreso */
+button {
+width: 100%;
+padding: 10px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-weight: bold;
+margin-top: 15px;
+}
+
+button:hover {
+background-color: #0056b3;
+}
