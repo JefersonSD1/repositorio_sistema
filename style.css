@@ -44,3 +44,57 @@ margin-top: 15px;
 button:hover {
 background-color: #0056b3;
 }
+
+/* =========================================
+Estilos para el Dashboard Principal
+========================================= */
+/* Barra de navegación superior */
+.navbar {
+background-color: #343a40;
+color: white;
+padding: 15px 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+position: fixed; /* Mantiene la barra siempre arriba */
+top: 0;
+box-sizing: border-box;
+}
+.btn-salir {
+color: #ff4d4d;
+text-decoration: none;
+font-weight: bold;
+border: 1px solid #ff4d4d;
+padding: 5px 15px;}
+border-radius: 4px;
+
+.btn-salir:hover {
+background-color: #ff4d4d;
+color: white;
+}
+/* Contenedor de las tarjetas de módulos */
+.dashboard-menu {
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 100px; /* Evita que la navbar cubra el contenido */
+padding: 20px;
+gap: 20px;
+}
+/* Diseño individual de cada tarjeta */
+.tarjeta-modulo {
+background-color: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+width: 30%;
+text-align: center;
+cursor: pointer;
+transition: transform 0.3s ease; /* Animación suave */
+}
+/* Efecto al pasar el mouse sobre la tarjeta */
+.tarjeta-modulo:hover {
+transform: translateY(-10px);
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
