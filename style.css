@@ -66,8 +66,9 @@ color: #ff4d4d;
 text-decoration: none;
 font-weight: bold;
 border: 1px solid #ff4d4d;
-padding: 5px 15px;}
-border-radius: 4px; 
+padding: 5px 15px;
+border-radius: 4px;
+}
 
 .btn-salir:hover {
 background-color: #ff4d4d;
