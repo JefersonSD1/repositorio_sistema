@@ -37,3 +37,17 @@ enteros)
 INSERT INTO productos (nombre_producto, categoria_id, stock, precio) VALUES
 ('Laptop Dell Inspiron 15', 1, 15, 720.00),
 ('Mouse Inalámbrico Logitech', 2, 25, 12.00);
+
+-- guia 11 reportes relacionales avanzados 
+--1 reporte general de inventario
+SELECT p.id, p.nombre_producto, c.nombre_categoria, p.stock, p.precio
+FROM productos p
+INNER JOIN categorias c
+ON p.categoria_id=c.id;
+
+--2 reporte filtrado por departamento
+SELECT p.id, p.nombre_producto, c.nombre_categoria, p.stock, p.precio
+FROM productos p
+INNER JOIN categorias c
+ON p.categoria_id=c.id
+WHERE c.nombre_categoria = "Accesorios";
