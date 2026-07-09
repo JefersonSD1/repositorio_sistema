@@ -133,3 +133,9 @@ text-align: left;
 background-color: #f8f9fa;
 color: #333;
 }
+
+.btn-eliminar {
+background-color: #ef4444; color: white; padding: 6px 12px;
+text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: bold;
+}
+.btn-eliminar:hover { background-color: #b91c1c; }
