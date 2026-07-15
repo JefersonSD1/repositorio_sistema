@@ -43,7 +43,7 @@ $_SESSION['nombre'] = $row['nombre_completo'];
 $_SESSION['rol'] = $row['rol'];
 
 // Redirigir al usuario al Dashboard del sistema de inventario
-header("Location: test_dashboard.php");
+header("Location: dashboard.php");
 exit();
 
 } else {
