@@ -73,3 +73,15 @@ SELECT c.nombre_categoria, SUM(p.stock) AS existencias_totales
 FROM productos p
 INNER JOIN categorias c ON p.categoria_id = c.id
 GROUP BY c.nombre_categoria;
+
+CREATE TABLE proveedores (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nombre_empresa VARCHAR(100) NOT NULL,
+contacto VARCHAR(100),
+telefono VARCHAR(20),
+direccion TEXT
+);
+
+INSERT INTO proveedores (nombre_empresa, contacto, telefono, direccion) VALUES
+('Tech Data El Salvador', 'Juan Pérez', '2255-8899', 'San Salvador, Col. Escalón'),
+('Distribuidora de Papel', 'María Gómez', '2666-4433', 'San Miguel, Centro');

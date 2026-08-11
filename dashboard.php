@@ -102,6 +102,8 @@ $_SESSION['rol']; ?>)</span>
 <!-- Accesos Rápidos del Sistema -->
 <h2 style="color: #334155;">Módulos del Sistema</h2>
 <div class="menu-modulos">
+    <a href="proveedores.php" class="modulo" style="background:#8b5cf6;">🚚 Módulo de
+Proveedores</a>
 <a href="inventario.php" class="modulo">📦Ir al Catálogo de Inventario</a>
 <!-- Este enlace lo programaremos en el siguiente bloque del año -->
 <a href="#" class="modulo" style="background:#64748b;">🛒Punto de Venta
