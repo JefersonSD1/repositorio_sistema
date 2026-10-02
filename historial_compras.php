@@ -1,4 +1,4 @@
-git add historial_compras.php dashboard.php<?php
+<?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
 header("Location: index.php");
@@ -66,6 +66,11 @@ echo "</tr>";
 echo "<tr><td colspan='5'>Sin registros de compras disponibles.</td></tr>";
 }
 ?>
+<td>
+<a href="detalle_compra.php?id=<?php echo $fila['numero_factura']; ?>" style="background:
+#2563eb; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size:
+13px; font-weight: bold;">Ver Detalle</a>
+</td>
 </tbody>
 </table>
 </div>
