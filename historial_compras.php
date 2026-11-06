@@ -5,13 +5,13 @@ header("Location: index.php");
 exit();
 }
 require_once 'conexion.php';
-$sql = "SELECT c.id AS numero_factura, c.fecha, p.nombre_empresa AS proveedor,
-u.nombre_completo AS cajero, c.total
+// Actualizar consulta SQL
+$sql = "SELECT c.id AS numero_factura, c.fecha, c.total, c.estado, p.nombre_empresa AS
+proveedor, u.nombre_completo AS usuario
 FROM compras c
 INNER JOIN proveedores p ON c.proveedor_id = p.id
 INNER JOIN usuarios u ON c.usuario_id = u.id
-ORDER BY c.id DESC";
-$resultado = $conn->query($sql);
+ORDER BY c.fecha DESC";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -48,6 +48,7 @@ th { background-color: #1e293b; color: #ffffff; }
 <th>Proveedor</th>
 <th>Usuario Responsable</th>
 <th>Total Invertido</th>
+<th>Estado</th>
 </tr>
 </thead>
 <tbody>
@@ -67,9 +68,24 @@ echo "<tr><td colspan='5'>Sin registros de compras disponibles.</td></tr>";
 }
 ?>
 <td>
+
 <a href="detalle_compra.php?id=<?php echo $fila['numero_factura']; ?>" style="background:
 #2563eb; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-size:
 13px; font-weight: bold;">Ver Detalle</a>
+<td>
+<?php if ($fila['estado'] === 'COMPLETADA'): ?>
+
+<span style="background: #dcfce7; color: #15803d; padding: 4px 8px; border-
+radius: 12px; font-size: 11px; font-weight: bold;">ACTIVA</span>
+
+<?php else: ?>
+
+<span style="background: #fee2e2; color: #b91c1c; padding: 4px 8px; border-
+radius: 12px; font-size: 11px; font-weight: bold;">ANULADA</span>
+
+<?php endif; ?>
+
+</td>
 </td>
 </tbody>
 </table>
